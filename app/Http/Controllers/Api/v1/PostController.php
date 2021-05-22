@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\v1;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\Http;
 
 
 class PostController extends Controller
@@ -84,4 +85,5 @@ class PostController extends Controller
     {
         //
     }
+ 
 }
