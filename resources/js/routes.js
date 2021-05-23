@@ -1,6 +1,7 @@
 import HomeComponent from "./components/HomeComponent";
 import LoginComponent from "./components/LoginComponent";
 import DashboardComponent from "./components/DashboardComponent";
+import CreatePost from "./components/CreatePost";
 
 export const routes = [
     {
@@ -19,6 +20,13 @@ export const routes = [
         path: "/dashboard",
         name : "dashboard",
         component:DashboardComponent,
+        meta: {
+            requiresAuth: true
+        },
+    },,{
+        path: "/create-post",
+        name : "create-post",
+        component:CreatePost,
         meta: {
             requiresAuth: true
         },

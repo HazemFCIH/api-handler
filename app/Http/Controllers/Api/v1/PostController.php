@@ -38,7 +38,16 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+        ]);
+        $post = Post::create([
+            'title' => $request->title,
+            'body' => $request->body,
+            'user_id' => auth('api')->user()->id,
+        ]);
+        return response()->json(['error' => false,'message'=>'post created successfully'],200);
     }
 
     /**
@@ -85,5 +94,5 @@ class PostController extends Controller
     {
         //
     }
- 
+
 }

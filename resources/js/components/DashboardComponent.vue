@@ -5,7 +5,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            Dashboard Component
+                            <h1>Dashboard Component </h1>
+                            <router-link class="btn btn-primary btn-sm" :to="{name:'create-post'}" >Create Post</router-link>
+
                         </div>
                         <div class="card-body">
                             <div class="posts" v-for="(post,index) in posts" :key="index" >

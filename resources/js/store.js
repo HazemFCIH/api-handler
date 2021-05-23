@@ -44,6 +44,7 @@ export default {
     actions:{
         login(context){
            context.commit('login');
-        }
+        },
+
     },
 }
